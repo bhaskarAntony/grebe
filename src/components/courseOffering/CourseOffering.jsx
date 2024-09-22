@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './style.css'
 
 const courseOfferingData = [
@@ -66,25 +66,68 @@ const courseOfferingData = [
 
 
 const CourseOfferings = () => {
+    const scrollContainerRef = useRef(null);
+
+  const scrollLeft = () => {
+    scrollContainerRef.current.scrollBy({ left: -300, behavior: "smooth" });
+  };
+
+  const scrollRight = () => {
+    scrollContainerRef.current.scrollBy({ left: 300, behavior: "smooth" });
+  };
     return (
         <div className="container mt-5">
-            <span className="fs-6 text-main">Why This Bootcamp Will Transform Your Tech Career</span>
-            <h1 className="fs-1 mt-0">Empower <span className="text-green-gradient">your Workforce</span></h1>
-            <p className="fs-6 text-secondary fw-bold">Accelerate your path to becoming a full stack developer with our comprehensive, industry-aligned program. We'll equip you with the in-demand skills, practical experience, and personalized support you need to thrive in the fast-paced tech world.</p>
-            <div className="row p-3">
-                {courseOfferingData.map((item, index) => (
-                    <div className="col-md-4 col-6 p-2" key={index}>
-                        <div className="card h-100 course-card">
-                            <div className="card-body">
-                                <i className={`bi ${item.icon} fs-3 mb-3`}></i> {/* Use Bootstrap icon */}
-                                <h5 className="card-title fs-4">{item.title}</h5>
-                                <p className="fs-6" style={{fontWeight:'500'}}>{item.description}</p>
-                            </div>
-                        </div>
-                    </div>
-                ))}
+        <span className="fs-6 text-main">
+          Why This Bootcamp Will Transform Your Tech Career
+        </span>
+        <h1 className="fs-1 mt-0">
+          Empower <span className="text-green-gradient">your Workforce</span>
+        </h1>
+        <p className="fs-6 text-secondary fw-bold">
+          Accelerate your path to becoming a full stack developer with our
+          comprehensive, industry-aligned program. We'll equip you with the
+          in-demand skills, practical experience, and personalized support you
+          need to thrive in the fast-paced tech world.
+        </p>
+  
+        {/* Left Scroll Button */}
+       
+  
+        <div
+          className="offering-card-container p-3"
+          ref={scrollContainerRef}
+          style={{ overflowX: "auto" }}
+        >
+          {courseOfferingData.map((item, index) => (
+            <div className="card h-100 course-card" key={index}>
+              <div className="card-body">
+                <i className={`bi ${item.icon} fs-3 mb-3`}></i>
+                <h5 className="card-title fs-4">{item.title}</h5>
+                <p className="fs-6" style={{ fontWeight: "500" }}>
+                  {item.description}
+                </p>
+              </div>
             </div>
+          ))}
         </div>
+        <div className="d-flex justify-content-center gap-2 mt-3">
+        <button
+          className="scroll-btn"
+          onClick={scrollLeft}
+        >
+          <i className="bi bi-chevron-left fs-2"></i>
+        </button>
+  
+        {/* Right Scroll Button */}
+        <button
+          className="scroll-btn"
+          onClick={scrollRight}
+        >
+          <i className="bi bi-chevron-right fs-2"></i>
+        </button>
+        </div>
+      </div>
+
     );
 };
 
