@@ -14,7 +14,7 @@
     min-height: 250px;
     transition: transform 0.3s ease-in-out;
     scroll-snap-align: center;
-    box-shadow: 0px 6px 0px rgb(218, 238, 231);
+    box-shadow: 0px 6px 0px rgb(238, 219, 218);
   }
   
   .course-card:not(:focus) {

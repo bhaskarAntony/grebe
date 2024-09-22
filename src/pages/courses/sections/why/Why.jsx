@@ -5,7 +5,7 @@ import './style.css'
 function Why({courseData}) {
   return (
     <section className='p-2 mt-5'>
-       <div className="container bg-white">
+       <div className="container">
         <small className="small text-main">WHY FULLSTACK DEVELOPMENT</small>
         <h1 className="fs-1"><span className="text-green-gradient">Rising Demand </span><br /> and Career Growth</h1>
         <hr />

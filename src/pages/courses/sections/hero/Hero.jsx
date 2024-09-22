@@ -9,7 +9,7 @@ function Hero({courseData, share}) {
   };
   return (
     <section className='hero-container p-2'>
-        <div className="page-hero container p-3 p-md-3">
+        <div className="page-hero container p-3 p-md-3 bg-white">
           <div className="row">
             <div className="col-md-7">
             <div className="d-flex gap-3 flex-wrap">
@@ -19,7 +19,7 @@ function Hero({courseData, share}) {
             </div>
            <div className="course-info mt-3">
            <small className="small text-main">{courseData.tag}</small>
-           <h2 className="fs-4">{courseData.heroSubtitle}</h2>
+           <h2 className="fs-6">{courseData.heroSubtitle}</h2>
            <h1 className="fs-1 text-green-gradient fw-bold">{courseData.courseName}</h1>
            <div>
       <div className={`fs-6 course-points ${expanded ? 'expanded' : ''}`}>

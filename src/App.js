@@ -3,7 +3,7 @@ import Fullstack from './pages/courses/Fullstack'
 
 function App() {
   return (
-    <div>
+    <div className='app'>
       <Fullstack/>
     </div>
   )
