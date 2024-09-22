@@ -1,0 +1,23 @@
+.why-card{
+    /* min-height: 300px; */
+}
+.companies-icons img{
+    object-fit: contain;
+}
+.job-points ul{
+    list-style-image: url('../../../../assets/images/job.png');
+    line-height: 3;
+}
+
+@media(max-width:768px){
+    .companies-icons{
+        gap: 10px !important;
+    }
+    .companies-icons img{
+        width: 60px;
+        height: 60px;
+    }
+    .c-top{
+        margin-top: 80px !important;
+    }
+}

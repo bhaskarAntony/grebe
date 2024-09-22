@@ -1,0 +1,17 @@
+.hero-container{
+    background: url(https://bepractical.s3.us-east-2.amazonaws.com/images/blur-bg.png) no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+
+}
+.page-hero{
+    min-height: 90vh;
+    background-color: #fff;
+    border-radius: 20px;
+    /* box-shadow: 0px 0px 10px #f8f8f8; */
+}
+.course-points ul{
+    list-style-image: url('../../../../assets/images/star.png') ;
+    line-height: 2;
+    font-weight: 600;
+}
